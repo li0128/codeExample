@@ -1,0 +1,5 @@
+Example: Installation from zip for Windows
+install.packages("path_of_zip(.zip)", repos=NULL, type = "win.binary",lib='D:/R/R-3.6.0/library/')
+
+Example: Installation from tar.gz for Linux
+install.packages("path_of_source(.tar.gz)", repos = NULL, type="source", lib='/usr/lib64/R/library')
