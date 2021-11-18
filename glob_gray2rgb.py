@@ -20,19 +20,21 @@ def gray2rgb(img):
 if __name__ == '__main__':
     print_hi('PyCharm')
 
+    # ./ is source dir
     for root, dirs, files in os.walk("./", topdown=False):
         for name in files:
             #print(os.path.splitext(name)[0])
             if (os.path.splitext(name)[-1]==".jpg"):
                 path_name=os.path.join(root, name)
                 rgb=gray2rgb(path_name)
-                cv2.imwrite(name,rgb)
+                # ./result images
+                cv2.imwrite("./result/"+name,rgb)
                 print(path_name)
         for name in dirs:
             if (os.path.splitext(name)[-1]==".jpg"):
                 path_name = os.path.join(root, name)
                 rgb=gray2rgb(path_name)
-                cv2.imwrite(name,rgb)
+                cv2.imwrite("./result/"+name,rgb)
                 print(path_name)
 
     #gray2rgb("1.jpg")
